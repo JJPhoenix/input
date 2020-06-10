@@ -6,7 +6,5 @@ function validarDni(el) {
         el.value = el.value.substring(0, el.value.length - 1);
     }
     console.log(el.value.length)
-    if (el.value.length === 8) {
-        el.value = el.value.substring(0, 9)
-    }
+
 }
