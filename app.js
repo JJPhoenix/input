@@ -5,18 +5,17 @@ function validarDni(el) {
     if (ex.test(el.value) == false) {
         el.value = el.value.substring(0, el.value.length - 1);
     }
-    console.log(el.value.length)
-    if (el.value.length === 8) {
-        el.value = el.value.substring(0, 9)
+    if (el.value.length >= 9) {
+        el.value = el.value.substring(0, 8)
     }
+    console.log(el.value)
 }
 
-function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    console.log(charCode)
-    if (charCode > 48 && charCode < 57) {
+function soloNumeros(e) {
+    var key = window.Event ? e.which : e.keyCode;
+    if (key >= 48 && key <= 57 || key == 8 || key == 0) {
         return true;
+    } else {
+        return false;
     }
-    return false;
 }
