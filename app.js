@@ -19,3 +19,8 @@ function soloNumeros(e) {
         return false;
     }
 }
+
+function exnumero(e) {
+    e.target.value = e.target.value.replace(/[^\d]/g, '');
+    return false;
+}
