@@ -20,7 +20,11 @@ function soloNumeros(e) {
     }
 }
 
-function exnumero(e) {
+function exnumero(e, length) {
+    if (e.target.value.length > length) {
+        e.target.value = e.target.value.substring(0, length - 1);
+    }
     e.target.value = e.target.value.replace(/[^\d]/g, '');
+
     return false;
 }
